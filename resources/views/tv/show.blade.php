@@ -26,7 +26,7 @@
                     {{ $tvShow['genres'] }}
                 </span>
             </div>
-            <p class="text-gray-300 mt-8">
+            <p class="text-gray-300 mt-8 text-sm border rounded-md border-gray-100 border-opacity-25 p-2">
                 {{ $tvShow['overview'] }}
             </p>
             <div class="mt-12">

@@ -7,6 +7,7 @@
     <title>Movie App</title>
     <script src="https://kit.fontawesome.com/df796f4737.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/main.css">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAABjY2MAAAAAAMfHxwD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgExERERExERITEzMzMTERERERERERERERExMzMzExEREREzMzMRERERMTMzMxMRERERMzMzERERETEzMzMTERERERERERERERExMzMzExEREREzMzMRERERMTMzMxMRERERMzMzERERETEzMzMTERERERERERESERExMzMzExKH+QAAwAEAAOABAADgAQAA4AEAAOABAADgAQAA4AEAAOABAADgAQAA4AEAAOABAADgAQAA4AEAAOAAAADgAAAA" rel="icon" type="image/x-icon" />
     <livewire:styles>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
@@ -35,11 +36,6 @@
             </ul>
             <div class="flex flex-col md:flex-row items-center">
                 <livewire:search-dropdown>
-                    <div class="md:ml-4 mt-3 md:mt-0">
-                        <a href="#" class="text-red-500">
-                            <i class="fas fa-user-tie rounded-full "></i>
-                        </a>
-                    </div>
             </div>
         </div>
     </nav>

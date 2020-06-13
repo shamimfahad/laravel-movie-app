@@ -10,12 +10,14 @@ class ActorViewModel extends ViewModel
     public $actor;
     public $social;
     public $credits;
+    public $images;
 
-    public function __construct($actor, $social, $credits)
+    public function __construct($actor, $social, $credits, $images)
     {
         $this->actor = $actor;
         $this->social = $social;
         $this->credits = $credits;
+        $this->images = $images;
     }
 
     public function actor() {
@@ -88,5 +90,17 @@ class ActorViewModel extends ViewModel
           'character' => isset($movie['character']) ? $movie['character'] : '',
         ]);
         })->sortByDesc('release_date');
+    }
+
+    public function images() {
+      $images = collect($this->images)->get('profiles');
+
+      return collect($images)->take(5)->map( function ($images) {
+        return collect($images)->merge([
+          'file_path' => $images['file_path']
+            ? 'https://image.tmdb.org/t/p/w440_and_h660_face'.$images['file_path']
+            : 'https://via.placeholder.com/440x660',
+        ]);
+      });
     }
 }

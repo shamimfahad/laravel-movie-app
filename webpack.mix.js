@@ -12,6 +12,7 @@ require("laravel-mix-purgecss");
  |
  */
 
-mix.sass("resources/sass/app.scss", "public/css")
-    .postCss("resources/css/main.css", "public/css", [require("tailwindcss")])
-    .browserSync("127.0.0.1:8000");
+mix.sass(
+    "resources/sass/app.scss",
+    "public/css"
+).postCss("resources/css/main.css", "public/css", [require("tailwindcss")]);

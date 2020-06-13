@@ -44,7 +44,7 @@
                 <span class="mx-2">|</span>
                 <span> {{ $actor['place_of_birth'] }}</span>
             </div>
-            <p class="text-gray-300 mt-8 text-justify">{{ $actor['biography'] }}</p>
+            <p class="text-gray-300 mt-8 text-justify text-sm border rounded-md border-gray-100 border-opacity-25 p-2">{{ $actor['biography'] }}</p>
             <h4 class="font-semibold mt-12">Known For</h4>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
                 @foreach($knownForMovies as $movie)
@@ -66,6 +66,23 @@
 </div>
 </div>
 <!-- end movie-info -->
+
+{{--Images--}}
+
+<div class="credits border-b border-gray-800">
+    <div class="container mx-auto px-4 py-8">
+        <h2 class="text-4xl font-semibold">Images</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+            @foreach($images as $image)
+            <div class="mt-4">
+                <img src="{{ $image['file_path'] }}"
+                     alt="poster" class="hover:opacity-75 transition ease-in-out duration-150">
+            </div>
+            @endforeach
+        </div>
+    </div>
+</div>
+
 <div class="credits border-b border-gray-800">
     <div class="container mx-auto px-4 py-16">
         <h2 class="text-4xl font-semibold">Credits</h2>

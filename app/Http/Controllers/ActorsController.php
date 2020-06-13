@@ -68,7 +68,11 @@ class ActorsController extends Controller
 			->get('https://api.themoviedb.org/3/person/'.$id.'/combined_credits')
 			->json();
 
-      $viewModel = new ActorViewModel($actor, $social, $credits);
+      $images = Http::withToken(config('services.tmdb.token'))
+			->get('https://api.themoviedb.org/3/person/'.$id.'/images')
+			->json();
+
+      $viewModel = new ActorViewModel($actor, $social, $credits, $images);
 
       return  view('actors.show', $viewModel);
     }

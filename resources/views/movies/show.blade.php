@@ -26,9 +26,11 @@
                     {{ $movie['genres'] }}
                 </span>
             </div>
-            <p class="text-gray-300 mt-8">
+
+            <p class="text-gray-300 text-sm mt-8 border rounded-md border-gray-100 border-opacity-25 p-2">
                 {{ $movie['overview'] }}
             </p>
+
             <div class="mt-12">
                 <h4 class="text-white font-semibold">Featured Crew</h4>
                 <div class="flex mt-4">
